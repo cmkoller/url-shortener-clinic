@@ -1,1 +1,20 @@
+<h1>Welcome to the URL Shortener!</h1>
 
+<h3>Existing Shortened URLS:</h3>
+
+<ul>
+  <% urls.each do |url_info| %>
+    <li>
+      <%= url_info["long"] %> -->
+      <a href="<%= url_info["short"] %>"><%= url_info["short"] %></a>
+    </li>
+  <% end %>
+</ul>
+
+<h3>Submit your URL:</h3>
+<form action="/" method="post">
+  <label for="long_url">URL:</label>
+  <input type="text" name="long_url">
+
+  <input type="submit">
+</form>
